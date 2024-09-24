@@ -78,6 +78,11 @@ npm start
 1. Descarga e instala [Postman](https://www.postman.com/downloads/) o utiliza la extension de Postman en VSCode.
 2. Prueba las solicitudes con parámetros de ejemplo para asegurarte de que todo funciona correctamente.
 
+<img width="500" alt="Screenshot 2024-09-24 at 7 52 02 PM" src="https://github.com/user-attachments/assets/f4f219f6-1383-41b8-886e-ce1e53495d63">
+<img width="500" alt="Screenshot 2024-09-24 at 7 51 49 PM" src="https://github.com/user-attachments/assets/3092e179-ce77-4120-974d-487ae0e11246">
+<img width="500" alt="Screenshot 2024-09-24 at 7 51 31 PM" src="https://github.com/user-attachments/assets/363e624a-c777-4b77-a857-9684cc95f208">
+
+
 ## Próximos Pasos
 
 1. **Mejorar Seguridad y Escalabilidad:**
