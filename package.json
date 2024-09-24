@@ -1,0 +1,19 @@
+{
+  "name": "meals-node-gemini-api",
+  "version": "1.0.0",
+  "description": "Api for a meal app that uses Gemini AI",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --env-file .env app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.19.0",
+    "express": "^4.21.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.5"
+  }
+}
