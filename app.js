@@ -1,6 +1,7 @@
 import express from "express";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import multer from "multer";
+import { mealPlanSchema } from "./mealPlanSchema.js";
 
 const PORT = process.env.PORT || 8000;
 
@@ -9,11 +10,20 @@ app.use(express.json());
 
 // Inicialización del cliente de Google Generative AI.
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
 // Ruta para generar un plan de comidas basado en los parámetros del usuario.
 app.get("/meal-plan", async (request, response) => {
   try {
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    // Respuesta estructurada
+    // const model = genAI.getGenerativeModel({
+    //   model: "gemini-1.5-pro",
+    //   generationConfig: {
+    //     responseMimeType: "application/json",
+    //     responseSchema: mealPlanSchema,
+    //   },
+    // });
+
     const prompt = `Genera un plan de comidas para una persona de ${request.query.age} 
     años de género ${request.query.gender} que pesa ${request.query.weight} kg y tiene como 
     objetivo alcanzar ${request.query.goalWeight} kg. Por favor, proporciona opciones para el 
@@ -69,6 +79,8 @@ app.post("/chat", async (request, response) => {
   const message = request.body.message;
 
   try {
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
     console.log(chatHistory);
     // Crear una instancia de chat con historial.
     const chat = model.startChat({
